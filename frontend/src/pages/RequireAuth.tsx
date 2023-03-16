@@ -49,7 +49,7 @@ export const Home = () => {
   }, []);
 
   return (
-    <div className="w-full flex flex-col md:flex-row gap-4 justify-center pt-4">
+    <div className="container mx-auto w-full flex flex-col md:flex-row gap-4 justify-center pt-4">
       <form
         className="flex w-full md:w-[50%] h-fit flex-col gap-4 rounded-lg border border-slate-300 p-8 shadow-sm"
         onSubmit={formik.handleSubmit}

@@ -35,7 +35,7 @@ export const Login: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center pt-20">
+    <div className="container mx-auto flex justify-center pt-20">
       <form
         className="flex w-96 flex-col gap-4 rounded-lg border border-slate-300 p-8 shadow-sm"
         onSubmit={formik.handleSubmit}

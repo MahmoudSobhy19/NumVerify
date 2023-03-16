@@ -82,7 +82,7 @@ export const History = () => {
     );
 
   return (
-    <div>
+    <div className="container mx-auto">
       {!data && !isLoading && <div>No History </div>}
       {data && <Table columns={columns} data={data} filter={true} />}
     </div>
