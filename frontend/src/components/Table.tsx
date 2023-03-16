@@ -48,14 +48,11 @@ export const Table: React.FC<TableProps> = ({
           className={`${className} w-full text-left text-sm text-gray-500`}
           {...getTableProps()}
         >
-          <thead className="w-full bg-gray-50 text-xs uppercase text-gray-700">
+          <thead className="bg-gray-50 text-xs uppercase text-gray-700">
             {headerGroups.map((headerGroup: any) => (
-              <tr
-                {...headerGroup.getHeaderGroupProps()}
-                className="w-full flex flex-col text-center md:text-left md:flex-row"
-              >
+              <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column: any) => (
-                  <th {...column.getHeaderProps()} className="w-full px-6 py-3">
+                  <th {...column.getHeaderProps()} className="px-6 py-3">
                     {column.render("Header")}
                   </th>
                 ))}
@@ -66,10 +63,7 @@ export const Table: React.FC<TableProps> = ({
             {rows.map((row: any) => {
               prepareRow(row);
               return (
-                <tr
-                  {...row.getRowProps()}
-                  className="w-full flex flex-col text-center md:text-left md:flex-row border-b bg-white"
-                >
+                <tr {...row.getRowProps()} className="border-b bg-white">
                   {row.cells.map((cell: any) => {
                     return (
                       <td {...cell.getCellProps()} className="px-6 py-4">
